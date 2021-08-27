@@ -25,4 +25,4 @@ if(window.attachEvent) {
     }
 }
 
-// trivial change to test deployment trigger on netlify
+// trivial change to test deployment trigger on netlify - now with correct branch name!
