@@ -10,10 +10,13 @@ const runApp = () => {
 }
 
 // document.addEventListener("DOMContentLoaded", runApp);
+console.log('starting');
 if(window.attachEvent) {
+    console.log('attachEvent found');
     window.attachEvent('onload', runApp);
 } else {
     if(window.onload) {
+        console.log('onload found');
         const curronload = window.onload;
         var newonload = function(evt: Event) {
             curronload(evt);
@@ -21,6 +24,7 @@ if(window.attachEvent) {
         };
         window.onload = newonload;
     } else {
+        console.log('setting onload');
         window.onload = runApp;
     }
 }
