@@ -7,4 +7,20 @@ const runApp = () => {
         appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
     }, 1000);
 };
-document.addEventListener("DOMContentLoaded", runApp);
+// document.addEventListener("DOMContentLoaded", runApp);
+if (window.attachEvent) {
+    window.attachEvent('onload', runApp);
+}
+else {
+    if (window.onload) {
+        const curronload = window.onload;
+        var newonload = function (evt) {
+            curronload(evt);
+            runApp();
+        };
+        window.onload = newonload;
+    }
+    else {
+        window.onload = runApp;
+    }
+}
