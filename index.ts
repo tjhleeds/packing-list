@@ -24,3 +24,5 @@ if(window.attachEvent) {
         window.onload = runApp;
     }
 }
+
+// trivial change to test deployment trigger on netlify
