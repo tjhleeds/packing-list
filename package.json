@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "tsc --outDir dist --project tsconfig.json"
+    "build": "tsc --outDir dist --project tsconfig.json --module commonjs"
   },
   "type": "module",
   "dependencies": {
